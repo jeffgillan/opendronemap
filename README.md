@@ -26,7 +26,7 @@ This is what the command is doing:
 * Run docker
 * Not sure what flags `-it` do exactly
 * `--rm` removes image after is has been run
-* `-v` mounts a volume. In this case it is the present working directory (pwd) on my local machine. Within this directory there must be a sub-directory called `/images`. This is where ODM will look for all of the raw drone images. 
+* `-v` mounts a volume. In this case it is the present working directory (pwd) on my local machine. Within this directory there must be a sub-directory called `/images`. This is where ODM will look for all of the raw drone images. For our example, we have 41 jpeg drone images. 
 * The directory is mounted to the directory `/datasets/code` inside the image
 * `opendronemap/odm` is the name of the Docker image which is located on Dockerhub
 * The rest of the arguments are flags and options. These are parameters to change how the processing is done. By default, ODM will run through the entire processing pipeline unless you say otherwise. Check out options at https://docs.opendronemap.org/arguments/
@@ -35,3 +35,9 @@ To run ODM with very quickly with low quality:
 ```
 docker run -ti -v $(pwd):/datasets/code  opendronemap/odm --project-path /datasets --skip-orthophoto --skip-report --pc-las --skip-3dmodel --pc-quality lowest
 ```
+### Outputs
+
+Completing the processing will take some time and will depend on your local computing resources. Once finished, there will be many new files and directories within your repository. 
+
+Within the directory `odm_georeferencing` you will find .las, .laz, and .copc.laz point cloud imagery products. 
+
