@@ -41,3 +41,5 @@ Completing the processing will take some time and will depend on your local comp
 
 Within the directory `odm_georeferencing` you will find .las, .laz, and .copc.laz point cloud imagery products. 
 
+You can view the cloud optimized point cloud (.copc.laz) at https://viewer.copc.io/
+
