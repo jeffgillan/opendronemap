@@ -7,6 +7,15 @@ https://docs.opendronemap.org/
 The easiest way to run ODM is to run it from an existing docker image which is found on dockerhub
 `opendronemap/odm:3.3.0`
 
+### 1. Clone this repository to your local machine
+
+`git clone https://github.com/jeffgillan/opendronemap.git`
+
+### 2. Change directories into the newly cloned repository
+
+`cd opendronemap`
+
+### 3. Run the Container
 
 ```
 docker run -ti --rm -v $(pwd):/datasets/code  opendronemap/odm:3.3.0 --project-path /datasets --skip-orthophoto --skip-report --pc-copc --pc-quality medium
