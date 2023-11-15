@@ -39,7 +39,11 @@ docker run -ti -v $(pwd):/datasets/code  opendronemap/odm --project-path /datase
 
 Completing the processing will take some time and will depend on your local computing resources. Once finished, there will be many new files and directories within your repository. 
 
+The new directories may not have the permissions you want. You can change the owner of the directories by typing `sudo chown -R username:username *`
+
 Within the directory `odm_georeferencing` you will find .las, .laz, and .copc.laz point cloud imagery products. 
+
+
 
 You can view the cloud optimized point cloud (.copc.laz) at https://viewer.copc.io/
 
