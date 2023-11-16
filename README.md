@@ -8,6 +8,7 @@ The easiest way to run ODM is to run it from an existing docker image which is f
 `opendronemap/odm:3.3.0`
 
 ### 1. Clone this repository to your local machine
+!!Warning: Cloning this repo will downdload 363MB of drone imagery to your local machine!!
 
 `git clone https://github.com/jeffgillan/opendronemap.git`
 
